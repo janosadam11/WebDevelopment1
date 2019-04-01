@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CutHair</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+</head>
+<body>
+
+<!--<h1>Hello Bootstrap</h1>-->
+
+<!--<a href="#" class="btn btn-danger" >Button</a>-->
+
+<!--Navigation-->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="#">CutHair</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="#services">Services <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#termin">Termin</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#prices">Prices</a>
+      </li>
+        <li class="nav-item">
+            <a class="nav-link" data-toggle="modal" data-target="#aboutModal">About us</a>
+        </li>
+    </ul>
+  </div>
+</nav>
+
+<!--<div class="row">-->
+    <!--<div class="col-3 red_box">3 Spalten</div>-->
+    <!--<div class="col-5 red_box">5 Spalten</div>-->
+    <!--<div class="col-4 red_box">4 Spalten</div>-->
+<!--</div>-->
+
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+  </ol>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img height="600" src="https://beuhairsalon.com/wp-content/uploads/2017/09/beuhair-interior-3-min-cropped.jpg" class="d-block w-100" alt="img1">
+    </div>
+    <div class="carousel-item">
+      <img height="600" src="http://spoiledrottenhairsalon.com/wp-content/themes/salon-1/images/slider-2.jpg" class="d-block w-100" alt="img2">
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+
+<div class="container mt-4">
+    <div class="container mt-4" id="services">
+        <h2 class="text-center">Our services</h2>
+
+        <div class="row">
+
+            <div class="col-md-4">
+                <div class="card">
+                    <img height="200" src="https://salonivy.com/wp-content/uploads/2015/01/extension.jpg" class="card-img-top" alt="img1">
+                    <div class="card-body">
+                        <h5 class="card-title text-center">Styling</h5>
+                        <p>We have an excellent team also for styling your head</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <img height="200" src="http://fashionisers.com/wp-content/uploads/2017/11/Pretty-Pastel-Hair-Colors-to-Dye-For-7-1.jpg" class="card-img-top" alt="img2">
+                    <div class="card-body">
+                        <h5 class="card-title text-center">Coloring</h5>
+                        <p>Crazy colors? Impossible is nothing by us!</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <img height="200" src="https://i.ytimg.com/vi/rjp80kCUwbI/maxresdefault.jpg" class="card-img-top" alt="img3">
+                    <div class="card-body align-content-center">
+                        <h5 class="card-title text-center">Haircuts</h5>
+                        <p>Long or short hair? Doesn't matter, we are experts in every style :)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div align="center" class="container mt-4" id="prices">
+             <div class="col-md-4 offset-md-1">
+               <h2 align="center">Price list</h2>
+                <table class="table table-responsive-md">
+                    <tbody>
+                        <tr>
+                            <td>Haircut</td>
+                            <td>15$</td>
+                        </tr>
+
+                        <tr>
+                            <td>Coloring</td>
+                            <td>40$</td>
+                        </tr>
+
+                        <tr>
+                            <td>Styling</td>
+                            <td>30$</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            </div>
+
+
+ <div class="container mt-4" id="appointment">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="well-block">
+                        <div id="termin" class="well-title">
+                            <h2 align="center">Make an appointment</h2>
+                        </div>
+                        <form>
+                            <!-- Form start -->
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="control-label" for="name">Name</label>
+                                        <input id="name" name="name" type="text" placeholder="Name" class="form-control input-md">
+                                    </div>
+                                </div>
+                                <!-- Text input-->
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="control-label" for="email">Email</label>
+                                        <input id="email" name="email" type="text" placeholder="E-Mail" class="form-control input-md">
+                                    </div>
+                                </div>
+                                <!-- Text input-->
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="control-label" for="number">Phone number</label>
+                                        <input id="number" name="number" type="text" placeholder="Phone number" class="form-control input-md">
+                                    </div>
+                                </div>
+                                <!-- Select Basic -->
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="control-label" for="appointmentfor">Appointment For</label>
+                                        <select id="appointmentfor" name="appointmentfor" class="form-control">
+                                            <option value="Service#1">Styling</option>
+                                            <option value="Service#2">Coloring</option>
+                                            <option value="Service#3">Haircut</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <!-- Button -->
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <button class="btn btn-success center-block mt-3">Send</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                        <!-- form end -->
+                    </div>
+                </div>
+           <div class="col-md-4 offset-md-1">
+               <h2 class="">Opening Hours</h2>
+                <table class="table table-responsive-md table-hover">
+
+
+                    <tbody>
+                        <tr>
+                            <td>Monday</td>
+                            <td>8:00 - 16:00</td>
+                        </tr>
+
+                        <tr>
+                            <td>Tuesday</td>
+                            <td>10:00 - 18:00</td>
+                        </tr>
+
+                        <tr>
+                            <td>Wednesday</td>
+                            <td>8:00 - 16:00</td>
+                        </tr>
+
+                        <tr>
+                            <td>Thursday</td>
+                            <td>8:00 - 16:00</td>
+                        </tr>
+
+                        <tr>
+                            <td>Friday</td>
+                            <td>12:00 - 20:00</td>
+                        </tr>
+
+                        <tr>
+                            <td>Saturday</td>
+                            <td>8:00 - 16:00</td>
+                        </tr>
+
+                        <tr>
+                            <td>Sunday</td>
+                            <td>8:00 - 12:00</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            </div>
+        </div>
+
+    <footer class="container">
+        <div class="row">
+            <div class="col-md-4 offset-md-1">
+                <h3>Contact</h3>
+
+                <p>CutHair Salon<br>
+                Tax number: 31421423423<br>
+                Cutyourhair street 11<br>
+                Phone: +43 123 456 7890<br>
+                Email: cuthair@gmail.com</p>
+            </div>
+
+            <div class="col-md-4">
+                <img src="https://ae01.alicdn.com/kf/HTB1jpI.XRcHL1JjSZFBq6yiGXXaR/Kasho-Scissors-Professional-Hair-Scissors-High-Quality-Hairdressing-Barber-Hair-Cutting-Shears-Sets-with-case.jpg_640x640.jpg" class="img-fluid" width="200px" >
+            </div>
+
+            <div class="col-md-3">
+                <h3>Site navigation</h3>
+                <ul>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#termin">Make an appointment</a></li>
+                    <li><a data-toggle="modal" data-target="#aboutModal">About us</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <div class="modal fade" id="aboutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">About us</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
+                        sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
+                        sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
+                        Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+                        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
+                        tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et
+                        accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus
+                        est Lorem ipsum dolor sit amet.
+                    </p>
+
+                    <p align="center">
+Your CutHair Team
+                    </p>
+
+                    <img width="" class="img-fluid" src="https://www.face-and-hair.de/wp-content/uploads/Team-Face-and-Hair-1.jpg" alt="img1">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</body>
+</html>
