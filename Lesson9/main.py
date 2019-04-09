@@ -26,30 +26,37 @@
 import sys
 
 #Unit converter
-def mileconverter(again):
+def mileconverter(value_km):
     value_miles = value_km * 0.621371
     print("Your value in miles: ", value_miles, "\n")
 
-def kmconverter(again):
+
+def kmconverter(value_mile):
     value_inkm = value_mile / 0.621371
     print("Your value in km: ", value_inkm, "\n")
 
 
+def decide(unit):
+    if unit.lower() == "km":
+        value_km = float(input("Please give the value in km: \n"))
+        mileconverter(value_km)
+    elif unit.lower() == "mile":
+        value_mile = float(input("Please give me the value in mile:"))
+        kmconverter(value_mile)
+
+
 print("This is a unit converter program. You can convert km to miles and backwards!")
-unit = input("Please give me the unit(km/mile): "))
-if unit == "km":
-    value_mile = float(input("Please give the value in km: \n"))
-    mileconverter(value_mile)
-elif unit == "mile":
-    value_km = float(input("Please give me the value in mile:"))
-    kmconverter(value_km)
+unit = input("Please give me the unit(KM/MILE): ")
+decide(unit)
 
 
 while True:
-    convert_Again = input("Would you like to convert again? y/n")
-    if convert_Again != "y":
+    convert_Again = input("Would you like to convert again? Y/N")
+    if convert_Again.lower() != "y":
         break
-    value_km = float(input("Please give the value in km again: \n"))
-    mileconverter(value_km)
+    unit = input("Please give me the unit(KM/MILE): ")
+    decide(unit)
+    # value_km = float(input("Please give the value in km again: \n"))
+    # mileconverter(value_km)
 
 
