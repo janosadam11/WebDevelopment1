@@ -18,5 +18,5 @@ if result % 11 == 0:
 else:
     check_digit = (result + (11 - (result % 11))) - result
 
-print("The checkdigit is:", check_digit)
+print("The checkdigit number is:", check_digit)
 print("The full ISBN number is: ISBN", isbn,"-", check_digit)
