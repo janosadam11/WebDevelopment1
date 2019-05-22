@@ -1,15 +1,24 @@
-{% extends "base.html" %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Simple database example</title>
+</head>
+<body>
 
-{% block title %}
-    <title>Smart ninja jinja title</title>
-{% endblock title %}
+    <h1>Simple database example</h1>
 
-{% block content %}
-    <h1>{{page_title}}</h1>
-    <p>Hallo index html page</p>
+    {% if user %}
+        <p>Hello {{user.name}}</p>
+        <p>This is your email address: {{user.email}}</p>
+    {% else %}
+        <form method="post" action="/login">
+            <input type="text" name="user-name" placeholder="Enter your name"><br>
+            <input type="email" name="user-email" placeholder="Enter your email address"><br>
 
-    {% for city in cities %}
-        <p>{{city}}</p>
-    {% endfor %}
+            <button>Submit</button>
+        </form>
+    {% endif %}
 
-{% endblock content %}
+</body>
+</html>
