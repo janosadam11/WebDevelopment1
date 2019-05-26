@@ -1,23 +1,21 @@
 from flask import Flask, render_template, request, redirect, url_for, make_response
-from Lesson_18.Usermodel import User
 
 app = Flask(__name__)
 
 
 @app.route("/")
 def index():
-    email_address = request.cookies.get("email")
 
-    if email_address:
-        user = User.fetch_one(query=["email", "==", email_address])
-    else:
-        user = None
 
     return render_template("index.html", user=user)
 
 
-@app.route("/login", methods=["POST"])
+@app.route("/gethandler", methods=["GET"])
 def login():
+    secret_number = request.cookies.get("secret_number")
+
+    if secret_number:
+
     name = request.form.get("user-name")
     email = request.form.get("user-email")
 
@@ -29,7 +27,7 @@ def login():
 
     return response
 
-@app.route("/logout")
+@app.route("/posthandler", methods=["POST"])
 def logout():
     response = make_response(redirect(url_for('index')))
     response.set_cookie("email", expires=0)
