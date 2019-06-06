@@ -127,5 +127,21 @@ def profile_delete():
         user.delete(obj_id=user.id)
         return render_template("index.html")
 
+@app.route("/users", methods=["GET"])
+def all_users():
+    users = User.fetch()
+
+    return render_template("users.html", users=users)
+
+
+@app.route("/user/<user_id>", methods=["GET"])
+def user_details(user_id):
+    user = User.get(obj_id=user_id)
+
+    return render_template("profile.html", user=user)
+
+
+
+
 if __name__ == '__main__':
     app.run(debug=True)
