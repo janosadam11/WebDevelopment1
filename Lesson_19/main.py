@@ -9,11 +9,18 @@ db.create_all()
 @app.route("/", methods=["GET"])
 def index():
     secret_number = request.cookies.get("secret_number")
+    user = db.query(Guess).filter(Guess.guesses).all()
+    print(user.Guess.guesses)
+
+
 
     response = make_response(render_template("index.html"))
     if not secret_number:
+        user = db.query(Guess).filter_by(Guess.guesses).first()
         new_secret = random.randint(1, 30)
         response.set_cookie("secret_number", str(new_secret))
+        if user:
+            print(user.Guess.guesses)
 
     return response
 
@@ -45,4 +52,4 @@ def posthandler():
 
 
 if __name__ == '__main__':
-    app.run(debug=True)  # if you use the port parameter, delete it before deploying to Heroku
+    app.run(debug=True)
